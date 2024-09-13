@@ -16,3 +16,7 @@ void tokenize(char* str, const char* delim, char ** argv){
   token = strtok(NULL, delim);
   }
 }
+
+int main(int argc, char *argv[]){
+  return 0;
+}
