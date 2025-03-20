@@ -4,7 +4,38 @@
 # CCID : sdbelhum
 #-----------------------------
 
-Design choices:
+# Dragonshell
+
+A simple Unix-like shell that supports basic shell functionalities such as command execution, piping, redirection, background processes, and built-in commands like pwd and cd.
+
+## Features
+
+Command Execution: Run external commands and programs with arguments.
+Built-in Commands:
+pwd: Print the current working directory.
+cd <path>: Change the current directory.
+Background Execution: Run processes in the background by appending & to a command.
+Input and Output Redirection:
+Redirect output using > to a file.
+Redirect input using < from a file.
+Piping: Chain commands using | to send the output of one command as input to another.
+Graceful Termination: Supports graceful exit with the exit command, displaying user and system times.
+Signal Handling: Handles SIGINT (Ctrl+C) and SIGTSTP (Ctrl+Z) to interrupt or suspend processes.
+
+## Requirements
+
+C Compiler: GCC or Clang.
+Unix-like System: Linux or macOS for compatibility with system calls and signal handling.
+
+## Compilation
+
+Run make, the makefile will create the executable file.
+
+## Usage
+
+Run the program using ./dragonshell
+
+## Design choices:
 
 Signal handling (uses sigaction, signal): 
 
